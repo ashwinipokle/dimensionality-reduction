@@ -27,9 +27,7 @@ large number of disk writes. If the IO time is very high, I will write another m
 and supply it soon. While testing src code last semester, for a given matrix size, I was generaing random numbers at run-time 
 and assigning them to input matrices and averaging time over multiple runs to get an estimate. So disk IO was not an issue.
 
-The scripts used while testing were basically bash scripts with varying number of input sizes & threads/processors/nodes/cores.
-I dont have original scripts but they were along the following lines.
-A sample is given below - 
+For testing a simple bash script can be written similar to the one given below - 
 
 #!/bin/bash
 
@@ -64,4 +62,4 @@ orthogonal matrices U & V after subtracting them from identity matrix.
 This value will basically detemine how orthogonal the matrices produced by this algorithm are
 and will validate the correctness of the algorithm.
 
-I can supply code for the same.
+I will soon supply code for the same.
