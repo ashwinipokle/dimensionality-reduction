@@ -25,18 +25,21 @@ For testing a simple bash script can be written similar to the one given below -
 
 make
 
+# For executing OpenMP code, write ./<name of executable> <number of rows> <number of columns> <number of threads>
 echo "omp output"
 ./omp 4000000000 4 8
 ./omp 2500000000 10 8
 ./omp 500000000 50 8
 ./omp 150000000 100 8
 
+# For executing MPI code, write mpirun -np <number of processors> <name of executable> <number of rows> <number of columns>
 echo "mpi output"
 mpirun -np 8 mpi 4000000000 4
 mpirun -np 8 mpi 2500000000 10
 mpirun -np 8 mpi 500000000 50 
 mpirun -np 8 mpi 150000000 100
 
+# For executing Hybrid code, write mpirun -np <number of processors> <name of executable> <number of rows> <number of columns> <number of threads>
 echo "hybrid output"
 mpirun -np 8 hybrid 4000000000 4 4
 mpirun -np 8 hybrid 2500000000 10 4
