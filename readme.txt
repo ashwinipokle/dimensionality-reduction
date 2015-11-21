@@ -1,6 +1,5 @@
-This repository contains mulit-thread, multi-node and hybrid (multi-core + multi-node) implementations of SVD and PCA using QR decomposition for Tall and Skinny matrices (TSQR).
-This work has been inspired by work of Benson, Austin R., David F. Gleich, and James Demmel in "Direct QR factorizations for tall-and-skinny matrices in MapReduce architectures."
-and extends their work to introduce task parallelism.
+This repository contains multi-thread, multi-node and hybrid (multi-core + multi-node) implementations of SVD and PCA using QR decomposition for Tall and Skinny matrices (TSQR).
+This work has been inspired by work of Benson, Austin R., David F. Gleich, and James Demmel in "Direct QR factorizations for tall-and-skinny matrices in MapReduce architectures." and extends their work to introduce task parallelism.
 
 This method of calculating PCA / SVD works only if cols >> rows, and this should be true even at lowest granularity i.e. even for individual core / worker thread, cols >> rows, otherwise this algorithm produces indeterminate results. 
 
@@ -57,6 +56,4 @@ Also, as a part of sanity tests, the orthogonality tests should be done. i.e. ca
     
 	|U^T * U - I|_2 
 
-This value will determine how orthogonal the matrices produced by this algorithm are and will validate the correctness of the algorithm (Smaller the value of L2-norm, better the results) .
-
-I will soon supply code for the same.
+This value will determine how orthogonal the matrices produced by this algorithm are and will validate the correctness of the algorithm.
